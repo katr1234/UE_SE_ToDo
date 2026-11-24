@@ -122,6 +122,29 @@ Die Working Directory wird an den Stand des Zielbranches angepasst.
 - Einfacheres Testen: Neue Funktionen können überprüft werden, bevor sie in den Hauptbranch übernommen werden.
 - Nachvollziehbarkeit: Änderungen einer Funktion lassen sich leichter zuordnen.
 
+## Szenario 5: Das neue Feature integrieren (Merge)
+### Begriffsdefinitionen
+| Begriff | Beschreibung |
+| --- |---|
+| git merge | Führt die Änderungen eines anderen Branches in den aktuell ausgecheckten Branch zusammen.
+| git branch -d | Löscht einen lokalen Branch, sofern Git dessen Löschung als sicher einstuft. |
+| git log --graph --oneline --all | Zeigt die Commit-Historie aller Branches in einer kompakten, grafischen Darstellung. |
+
+### Fragen
+#### Was passiert bei einem Merge?
+Bei einem Merge werden die Entwicklungsstände von zwei Branches zusammengeführt.   
+Dabei werden die Änderungen eines Branches in den aktuell verwendeten Branch übernommen.
+
+#### Was versteht man unter einem Fast-Forward-Merge?
+Ein Fast-Forward-Merge ist eine einfache Form des Merges, bei der Git keinen zusätzlichen Merge-Commit erstellen muss.
+Das funktioniert, wenn seit der Verzweigung keine neuen Commits im Zielbranch entstanden sind.
+Git verschiebt dabei lediglich den Branch-Zeiger auf den neuesten Commit des anderen Branches.
+
+#### Warum kann ein Branch nach einem erfolgreichen Merge gelöscht werden?
+Ein Branch kann nach einem erfolgreichen Merge gelöscht werden, weil seine Änderungen bereits in den Zielbranch übernommen wurden.
+Dadurch erhält man: 
+- Übersichtlichkeit: Nicht mehr benötigte Branches werden entfernt
+- Bessere Organisation: Es ist leichter zu erkennen, welche Funktionen noch entwickelt werden
 
 
 

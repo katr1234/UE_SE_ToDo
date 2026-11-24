@@ -96,9 +96,31 @@ Aussagekräftige Commit-Nachrichten sind wichtig, damit Änderungen in der Versi
 #### Welche Änderungen gehen beim Wiederherstellen einer Datei verloren?
 - Bei ```git restore <datei>``` gehen die noch nicht in der Staging Area vorgemerkten Änderungen verloren.
 - Hinzugefügte, veränderte oder gelöschte Zeilen auf den Stand der Staging Area zurückgesetzt
-- Bereits mit ```git add``` vorgemerkte Änderungen bleiben erhalten.
+- Bereits mit ```git add``` vorgemerkte Änderungen bleiben erhalten
 
+## Szenario 4: Ein neues Feature entwickeln (Branching)
+### Begriffsdefinitionen
+| Begriff | Beschreibung |
+| --- |---|
+| git branch | Zeigt alle lokalen Branches an. Mit zusätzlichen Argumenten können Branches erstellt oder gelöscht werden. |
+| git switch |Wechselt zwischen bestehenden Branches. Mit -c kann ein neuer Branch erstellt und direkt zu diesem gewechselt werden. |
+| git log --oneline --graph --all | Zeigt die Commit-Historie aller Branches in einer kompakten, grafischen Darstellung. |
 
+### Fragen
+#### Warum verwendet man Branches?
+Branches werden verwendet, um verschiedene Entwicklungsstände unabhängig voneinander weiterzuentwickeln.
+
+Dadurch können neue Funktionen entwickelt und Fehler behoben ohne den main direkt zu veränden.
+
+#### Was passiert mit den Dateien beim Wechsel zwischen Branches?
+Die Working Directory wird an den Stand des Zielbranches angepasst.
+
+#### Welche Vorteile bietet die Entwicklung neuer Funktionen in eigenen Branches?
+- Trennung der Entwicklung: Neue Funktionen können unabhängig vom Hauptbranch entwickelt werden.
+- Stabilität: Es gibt den Hauptbranch, der immer Kompeliert
+- Teamarbeit: Mehrere Entwickler können gleichzeitig an unterschiedlichen Funktionen arbeiten.
+- Einfacheres Testen: Neue Funktionen können überprüft werden, bevor sie in den Hauptbranch übernommen werden.
+- Nachvollziehbarkeit: Änderungen einer Funktion lassen sich leichter zuordnen.
 
 
 

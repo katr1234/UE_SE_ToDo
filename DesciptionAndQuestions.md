@@ -53,12 +53,50 @@ Wie kann ich mir den letzten commit anzeigen?
 
 ### Fragen
 #### Was zeigt git diff an?
-
+```git diff``` zeigt die Unterschiede zwischen dem aktuellen Working Directory und der Staging Area. Damit erkennt man, welche Änderungen an bereits versionierten Dateien noch nicht für den nächsten Commit vorgemerkt wurden.   
+Standardmäßig werden beispielsweise hinzugefügte, entfernte und geänderte Codezeilen angezeigt.
 
 #### Worin unterscheiden sich git diff und git diff --staged?
+```git diff```
+- zeigt noch nicht vorgemerkte Änderungen
+- Vergleicht Working Directory mit Staging Area
 
+```git diff --staged```
+- Zeigt bereits vorgemerkte Änderungen.
+- Vergleicht Staging Area mit dem letzten Commit.
 
 #### Warum sind aussagekräftige Commit-Nachrichten wichtig?
+Aussagekräftige Commit-Nachrichten sind wichtig, damit Änderungen in der Versionshistorie verständlich und nachvollziehbar bleiben.
+- Nachvollziehen, was in einem Commit geändert wurde
+- Anforderungen zu finden (z.B. Ref zum Ticket)
+- Erleichterung bei der Zusammenarbeit und bei Merge Request
+- Erleichtert das finden von früheren Änderungen
+
+## Szenario 3: Einen Fehler rückgängig machen
+### Begriffsdefinitionen
+| Begriff | Beschreibung |
+| --- |---|
+| git diff | Zeigt die Änderungen an bereits versionierten Dateien, die noch nicht in der Staging Area vorgemerkt wurden. |
+| git restore | Stellt eine Datei im Working Directory auf den Stand der Staging Area zurück. Nicht vorgemerkte Änderungen an dieser Datei werden verworfen. |
+| git restore --staged | Entfernt eine Datei aus der Staging Area, ohne die Änderungen im Working Directory zu löschen.|
+| git status | Zeigt den aktuellen Zustand des Repositories, insbesondere welche Dateien geändert, vorgemerkt oder noch nicht versioniert sind. |
+
+### Fragen
+#### Was ist der Unterschied zwischen git restore und git restore --staged?
+```git restore```
+- stellt den Inhalt einer Datei wieder her
+- Working Directory
+- nicht vorgemerkte Änderungen gehen verlogen
+
+```git restore --staged```
+- macht das vormerken mit ```git add``` rückgängig
+- betrifft die staging area
+- Änderungen im Working Directory bleiben erhalten
+
+#### Welche Änderungen gehen beim Wiederherstellen einer Datei verloren?
+- Bei ```git restore <datei>``` gehen die noch nicht in der Staging Area vorgemerkten Änderungen verloren.
+- Hinzugefügte, veränderte oder gelöschte Zeilen auf den Stand der Staging Area zurückgesetzt
+- Bereits mit ```git add``` vorgemerkte Änderungen bleiben erhalten.
 
 
 

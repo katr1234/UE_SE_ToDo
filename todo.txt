@@ -1,5 +1,3 @@
-[ ] UE SE Hausübung fertigstellen
-[ ] Fachsprache Englisch - Präsentation Erstellen
-[ ] Tests für RideShare in PR SE erstellen
-[ ] Weihnachtsgeschenke Einkaufen
-[ ] Kekse backen
+[ ] HOCH: UE SE Hausübung fertigstellen
+[ ] MITTEL: Fachsprache Englisch - Präsentation Erstellen
+[ ] NIEDRIG: Kekse backen

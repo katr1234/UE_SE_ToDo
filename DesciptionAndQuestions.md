@@ -146,5 +146,28 @@ Dadurch erhält man:
 - Übersichtlichkeit: Nicht mehr benötigte Branches werden entfernt
 - Bessere Organisation: Es ist leichter zu erkennen, welche Funktionen noch entwickelt werden
 
+## Szenario 6: Einen Merge-Konflikt lösen
+```git merge, git status, git diff, git add, git commi```
 
+### Fragen
+#### Wann entsteht ein Merge-Konflikt?
+Ein Merge-Konflikt entsteht, wenn zwei Branches widersprüchliche Änderungen enthalten und Git diese nicht automatisch zusammenführen kann.   
+Das passiert beispielsweise, wenn zwei Entwickler dieselbe Zeile einer Datei unterschiedlich verändern.   
+Wenn beide Änderungen auf demselben ursprünglichen Stand basieren, kann Git beim Zusammenführen einen Konflikt melden, weil nicht eindeutig ist, welche Änderung übernommen werden soll.   
+Merge-Konflikte können auch entstehen, wenn eine Datei in einem Branch gelöscht und im anderen bearbeitet wurde.
 
+#### Wie kennzeichnet Git widersprüchliche Änderungen?
+`<<<<<<<` HEAD	Beginn der Version des aktuellen Branches
+`=======` Trennt die beiden widersprüchlichen Versionen
+`>>>>>>>` neue-funktion	Ende der Version aus dem zusammenzuführenden Branch
+
+#### Wie kann ein Merge-Konflikt aufgelöst werden?
+Ein Merge-Konflikt muss manuell bearbeitet werden, wenn Git die Änderungen nicht automatisch zusammenführen kann.
+
+Schritte:
+- `git merge neue-funktion`
+- `git status`: sehen der betroffenen Dateien
+- Konflikt beheben: Öffne die betroffene Datei und entscheide, welche Version übernommen werden soll.
+- `git add index.html`: Dateien als gelöst merkieren.
+- `git commit`: Merge abschließen
+Konfliktdatei öffnen, gewünschte Änderungen auswählen oder kombinieren, Konfliktmarker entfernen, mit git add als gelöst markieren und den Merge mit git commit abschließen.

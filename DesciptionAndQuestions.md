@@ -39,3 +39,29 @@ Wie kann ich mir den letzten commit anzeigen?
 - ```git show```: Letzten Commit Anzeigen
 - ```git log```: Alle bisherigen Commits anzeigen
 
+## Szenario 2: Änderungen nachvollziehen
+### Begriffsdefinitionen
+| Begriff | Beschreibung |
+| --- |---|
+| git status | Zeigt den aktuellen Zustand des Repositories. Man sieht, welche Dateien verändert, neu oder für einen Commit vorgemerkt sind. |
+| git diff | Zeigt die Änderungen im Working Directory, die noch nicht mit git add vorgemerkt wurden. |
+| git diff --staged	| Zeigt die Änderungen, die bereits mit git add in der Staging Area vorgemerkt wurden und im nächsten Commit enthalten sein werden. |
+| git add |	Übernimmt ausgewählte Änderungen in die Staging Area und bereitet sie damit für den nächsten Commit vor. |
+| git commit | Speichert die vorgemerkten Änderungen als neuen Commit im lokalen Repository. |
+| git log | Zeigt die bisherige Commit-Historie mit Informationen wie Commit-ID, Autor, Datum und Commit-Nachricht. |
+
+
+### Fragen
+#### Was zeigt git diff an?
+
+
+#### Worin unterscheiden sich git diff und git diff --staged?
+
+
+#### Warum sind aussagekräftige Commit-Nachrichten wichtig?
+
+
+
+
+
+

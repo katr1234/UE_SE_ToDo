@@ -13,10 +13,29 @@
 
 ### Fragen
 #### Was ist der Unterschied zwischen Working Directory, Staging Area und Repository?
+| Begriff | Beschreibung |
+| --- |---|
+| Working Directory (Arbeitsverzeichnis) | Hier befinden sich die Dateien, die aktuell bearbeitet werden. Dateien können erstellt, bearbeitet oder gelöscht werden. |
+| Staging Area | Hier werden Änderungen mit ```git add``` für den nächsten commit vorgemerkt |
+| Repository |Hier speichert Git die Versionshistorie des Projektes. Mit ```git commit``` werden die vorgemerkten Änderungen dauert in der lokalen Git-Historie festghalten. |
 
 #### Warum müssen Dateien vor einem Commit mit git add vorgemerkt werden?
+Mit ```git add``` wird festgelegt, welche Änderungen im nächsten commit enthalten sind.   
+Dadurch kann man gezielt auswählen, welche Änderungen zusammengehören. Nicht jede Änderung im Arbeitsverzeichnis muss sofort gespeichert werden.
+
+```git commit``` übernimmt die vorgemerkten Änderungen aus der Staging Area.
+
+
 #### Welche Informationen werden in einem Commit gespeichert?
+Ein Git-Commit enhtält folgende Informationen
+- Commit-ID (Hash): Eindeutige Kennung des Commits.
+- Autor: Person, die die Änderungen erstellt hat.
+- Datum und Uhrzeit: Zeitangaben zur Erstellung des Commits.
+- Commit-Nachricht: Beschreibung der vorgenommenen Änderungen.
+- Projektzustand (Snapshot): Gespeicherter Stand der versionierten Dateien.
+- Verweis auf vorherige Commits: Dadurch entsteht die Versionshistorie.
 
-
-
+Wie kann ich mir den letzten commit anzeigen?
+- ```git show```: Letzten Commit Anzeigen
+- ```git log```: Alle bisherigen Commits anzeigen
 

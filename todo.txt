@@ -1,3 +1,4 @@
 [ ] HOCH: UE SE Hausübung fertigstellen
 [ ] HOCH: Fachsprache Englisch - Präsentation Erstellen
 [ ] NIEDRIG: Kekse backen
+[ ] Szenario 8 - TODO List ändern
